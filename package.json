@@ -2,7 +2,7 @@
   "name": "@shopmacher/trinity",
   "version": "0.1.0",
   "description": "Media query mixins for multiple devices and grid systems using LESS",
-  "main": "index.js",
+  "main": "lib/trinity.less",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,10 @@
     "responsive",
     "mixins"
   ],
-  "author": "Rico Herwig",
+  "author": {
+    "name": "Rico Herwig",
+    "email": "r.herwig@shopmacher.de"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rherwig/trinity/issues"

@@ -1,0 +1,27 @@
+// generic tablet devices
+@tablet-min: 768px;
+@tablet-max: 1024px;
+
+// composed queries
+@tablet: ~"(min-device-width: @{tablet-min}) and (max-device-width: @{tablet-max})";
+@tablet-portrait: ~"(min-device-width: @{tablet-min}) and (max-device-width: @{tablet-max}) and (orientation: portrait)";
+@tablet-landscape: ~"(min-device-width: @{tablet-min}) and (max-device-width: @{tablet-max}) and (orientation: landscape)";
+
+// mixins
+.tablet(@rules) {
+  @media @tablet {
+    @rules();
+  }
+}
+
+.tablet-portrait(@rules) {
+  @media @tablet-portrait {
+    @rules();
+  }
+}
+
+.tablet-landscape(@rules) {
+  @media @tablet-landscape {
+    @rules();
+  }
+}

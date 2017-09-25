@@ -1,0 +1,12 @@
+// generic desktop device
+@desktop-min: 1025px;
+
+// composed queries
+@desktop: ~"(min-device-width: @{desktop-min})";
+
+// mixins
+.desktop(@rules) {
+  @media @desktop {
+    @rules();
+  }
+}

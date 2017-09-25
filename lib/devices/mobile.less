@@ -1,0 +1,27 @@
+// generic mobile device
+@mobile-min: 320px;
+@mobile-max: 480px;
+
+// composed queries
+@mobile: ~"(min-device-width: @{mobile-min}) and (max-device-width: @{mobile-max})";
+@mobile-portrait: ~"(min-device-width: @{mobile-min}) and (max-device-width: @{mobile-max}) and (orientation: portrait)";
+@mobile-landscape: ~"(min-device-width: @{mobile-min}) and (max-device-width: @{mobile-max}) and (orientation: landscape)";
+
+// mixins
+.mobile(@rules) {
+  @media @mobile {
+    @rules();
+  }
+}
+
+.mobile-portrait(@rules) {
+  @media @mobile-portrait {
+    @rules();
+  }
+}
+
+.mobile-landscape(@rules) {
+  @media @mobile-landscape {
+    @rules();
+  }
+}

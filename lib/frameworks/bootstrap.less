@@ -1,0 +1,61 @@
+// bootstrap breakpoints
+@xs-max: 768px;
+@sm-min: 769px;
+@sm-max: 991px;
+@md-min: 992px;
+@md-max: 1199px;
+@lg-min: 1200px;
+
+// bootstrap grid
+@xs: ~"(max-width: @{xs-max})";
+@sm: ~"(min-width: @{sm-min}) and (max-width: @{sm-max})";
+@md: ~"(min-width: @{md-min}) and (max-width: @{md-max})";
+@lg: ~"(min-width: @{lg-min})";
+
+@xs-up: ~"(min-width: 0)";
+@sm-up: ~"(min-width: @{sm-min})";
+@md-up: ~"(min-width: @{md-min})";
+@lg-up: ~"(min-width: @{lg-min})";
+
+// mixins
+.xs(@rules) {
+  @media @xs {
+    @rules();
+  }
+}
+
+.xs-up(@rules) {
+  @media @xs-up {
+    @rules();
+  }
+}
+
+.sm(@rules) {
+  @media @sm {
+    @rules();
+  }
+}
+
+.sm-up(@rules) {
+  @media @sm-up {
+    @rules();
+  }
+}
+
+.md(@rules) {
+  @media @md {
+    @rules();
+  }
+}
+
+.md-up(@rules) {
+  @media @md-up {
+    @rules();
+  }
+}
+
+.lg(@rules) {
+  @media @lg {
+    @rules();
+  }
+}
