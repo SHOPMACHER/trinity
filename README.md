@@ -9,6 +9,7 @@ painlessly.
 - [x] Implement bootstrap breakpoints
 - [ ] Document usage
 - [ ] Provide examples
+- [ ] Add support for em media queries
 
 ## License
 MIT

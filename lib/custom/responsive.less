@@ -1,0 +1,12 @@
+// mixin for custom media queries
+.responsive(@from, @rules) {
+  @media (min-width: @from) {
+    @rules();
+  }
+}
+
+.responsive(@from, @to, @rules) {
+  @media (min-width: @from) and (max-width: @to) {
+    @rules();
+  }
+}

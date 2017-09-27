@@ -3,13 +3,22 @@
 @mobile-max: 480px;
 
 // composed queries
-@mobile: ~"(min-device-width: @{mobile-min}) and (max-device-width: @{mobile-max})";
-@mobile-portrait: ~"(min-device-width: @{mobile-min}) and (max-device-width: @{mobile-max}) and (orientation: portrait)";
-@mobile-landscape: ~"(min-device-width: @{mobile-min}) and (max-device-width: @{mobile-max}) and (orientation: landscape)";
+@mobile: ~"(min-width: @{mobile-min}) and (max-width: @{mobile-max})";
+@mobile-up: ~"(min-width: @{mobile-min})";
+@mobile-portrait: ~"(min-width: @{mobile-min}) and (max-width: @{mobile-max}) and (orientation: portrait)";
+@mobile-portrait-up: ~"(min-width: @{mobile-min}) and (orientation: portrait)";
+@mobile-landscape: ~"(min-width: @{mobile-min}) and (max-width: @{mobile-max}) and (orientation: landscape)";
+@mobile-landscape-up: ~"(min-width: @{mobile-min}) and (orientation: landscape)";
 
 // mixins
 .mobile(@rules) {
   @media @mobile {
+    @rules();
+  }
+}
+
+.mobile-up(@rules) {
+  @media @mobile-up {
     @rules();
   }
 }
@@ -20,8 +29,20 @@
   }
 }
 
+.mobile-portrait-up(@rules) {
+  @media @mobile-portrait-up {
+    @rules();
+  }
+}
+
 .mobile-landscape(@rules) {
   @media @mobile-landscape {
+    @rules();
+  }
+}
+
+.mobile-landscape-up(@rules) {
+  @media @mobile-landscape-up {
     @rules();
   }
 }

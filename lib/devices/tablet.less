@@ -3,13 +3,22 @@
 @tablet-max: 1024px;
 
 // composed queries
-@tablet: ~"(min-device-width: @{tablet-min}) and (max-device-width: @{tablet-max})";
-@tablet-portrait: ~"(min-device-width: @{tablet-min}) and (max-device-width: @{tablet-max}) and (orientation: portrait)";
-@tablet-landscape: ~"(min-device-width: @{tablet-min}) and (max-device-width: @{tablet-max}) and (orientation: landscape)";
+@tablet: ~"(min-width: @{tablet-min}) and (max-width: @{tablet-max})";
+@tablet-up: ~"(min-width: @{tablet-min})";
+@tablet-portrait: ~"(min-width: @{tablet-min}) and (max-width: @{tablet-max}) and (orientation: portrait)";
+@tablet-portrait-up: ~"(min-width: @{tablet-min}) and (orientation: portrait)";
+@tablet-landscape: ~"(min-width: @{tablet-min}) and (max-width: @{tablet-max}) and (orientation: landscape)";
+@tablet-landscape-up: ~"(min-width: @{tablet-min}) and (orientation: landscape)";
 
 // mixins
 .tablet(@rules) {
   @media @tablet {
+    @rules();
+  }
+}
+
+.tablet-up(@rules) {
+  @media @tablet-up {
     @rules();
   }
 }
@@ -20,8 +29,20 @@
   }
 }
 
+.tablet-portrait-up(@rules) {
+  @media @tablet-portrait-up {
+    @rules();
+  }
+}
+
 .tablet-landscape(@rules) {
   @media @tablet-landscape {
+    @rules();
+  }
+}
+
+.tablet-landscape-up(@rules) {
+  @media @tablet-landscape-up {
     @rules();
   }
 }
