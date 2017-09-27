@@ -1,6 +1,6 @@
 {
   "name": "@shopmacher/trinity",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Media query mixins for multiple devices and grid systems using LESS",
   "main": "lib/trinity.less",
   "scripts": {
